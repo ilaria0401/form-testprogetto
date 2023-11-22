@@ -1,0 +1,43 @@
+<h1>{{title}}</h1>
+<form [formGroup]="FormSearch">
+
+  <div>
+    <label for="nome"> nome:</label>
+    <input class="margini" type="text" formControlName="nome">
+  </div>
+  
+<div>
+  <label for="cognome"> cognome</label>
+  <input class="marginicog-pss" type="text" formControlName="cognome">
+</div>
+  
+ <div>
+  <label for="altezza"> altezza</label>
+  <input class="maltezza" type="text" formControlName="altezza">
+ </div>
+ 
+ <div>
+  <label for="password"> password</label>
+  <input class="marginicog-pss" type="password" formControlName="password">
+ </div>
+  
+
+  <button class="bottone-verde" type="submit" (click)="salvaDati()">SALVA</button>
+  
+  </form>
+
+  <h2>TABELLE</h2>
+
+  <table>
+    <tr>
+      <th>Penna</th>
+      <th>Parrucca</th>
+      <th>Patente</th>
+    </tr>
+    <tr *ngFor="let c of mobile">
+      <td>{{c.penna}}</td>
+      <td>{{c.parrucca}}</td>
+      <td>{{c.patente}}</td>
+    </tr>
+ 
+  </table>
